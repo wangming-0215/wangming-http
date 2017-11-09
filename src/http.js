@@ -16,6 +16,8 @@
     });
   };
 
+  Http.prototype.post = function(url = '', data = {}) {};
+
   function onload(resolve, reject) {
     if (req.status === 200) {
       resolve(req.response);
