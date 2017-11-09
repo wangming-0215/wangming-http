@@ -1,5 +1,5 @@
 (function(window) {
-  window.Http = window.Http || {};
+  const Http = window.Http || {};
 
   const req = new XMLHttpRequest();
 
