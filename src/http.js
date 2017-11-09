@@ -1,6 +1,4 @@
 (function(window) {
-  const Http = window.Http || {};
-
   const req = new XMLHttpRequest();
 
   function Http() {}
