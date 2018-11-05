@@ -1,34 +1,34 @@
 (function(window) {
-  const req = new XMLHttpRequest();
+	const req = new XMLHttpRequest();
 
-  function Http() {}
+	function Http() {}
 
-  Http.prototype.get = function(url = '') {
-    return new Promise((resolve, reject) => {
-      req.open('GET', url);
-      req.onload = function() {
-        onload(resolve, reject);
-      };
-      req.onerror = function() {
-        onerror(reject);
-      };
-      req.send();
-    });
-  };
+	// Http.prototype.get = function(url = '') {
+	// 	return new Promise((resolve, reject) => {
+	// 		req.open('GET', url);
+	// 		req.onload = function() {
+	// 			onload(resolve, reject);
+	// 		};
+	// 		req.onerror = function() {
+	// 			onerror(reject);
+	// 		};
+	// 		req.send();
+	// 	});
+	// };
 
-  Http.prototype.post = function(url = '', data = {}) {};
+	// Http.prototype.post = function(url = '', data = {}) {};
 
-  function onload(resolve, reject) {
-    if (req.status === 200) {
-      resolve(req.response);
-    } else {
-      reject(new Error(req.statusText));
-    }
-  }
+	// function onload(resolve, reject) {
+	// 	if (req.status === 200) {
+	// 		resolve(req.response);
+	// 	} else {
+	// 		reject(new Error(req.statusText));
+	// 	}
+	// }
 
-  function onerror(reject) {
-    reject(new Error('Network error'));
-  }
+	// function onerror(reject) {
+	// 	reject(new Error('Network error'));
+	// }
 
-  window.Http = Http;
+	window.Http = Http;
 })(window);
